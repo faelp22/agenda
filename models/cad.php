@@ -1,13 +1,10 @@
 <?php
+	require_once '/var/www/agenda/controls/urls.php';
+	
 	$dados = $_POST;
-	
-	
-	$projeto = "/agenda";
-	$caminho = $_SERVER['DOCUMENT_ROOT'].$projeto;
-	$index = "http://localhost".$projeto;
-	
+		
 	//abrindo arquivo para guardar os dados
-	$arquivo = fopen($caminho."/database/contatos.txt", "a+");
+	$arquivo = fopen($raiz."/database/contatos.txt", "a+");
 	
 
 	//funcao que escreve dentro do arquivo

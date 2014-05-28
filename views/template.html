@@ -16,7 +16,7 @@
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		<link rel="stylesheet" href="views/static/css/style.css" media="all" />
+		<link rel="stylesheet" href="<?php echo $index;?>/views/static/css/style.css" media="all" />
 	</head>
 
 	<body>
@@ -29,7 +29,7 @@
 					<?php $usuario = $_SESSION['user']; echo "Bem vindo, ".$usuario[0];?> <a href="?op=logout">Sair</a>
 				</p>
 				<p>
-					<a href="http://localhost/agenda/">Home</a>
+					<a href="<?php echo $index;?>">Home</a>
 				</p>
 				<p>
 					<a href="?op=cad">Cadastra</a>
