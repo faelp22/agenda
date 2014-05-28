@@ -1,16 +1,20 @@
 <?php
-	$email = isset($_POST['email']);
-	$senha = isset($_POST['senha']);
+	$email = $_POST['email'];
+	$senha = $_POST['senha'];
 	
 	$index = "http://localhost/agenda/";
 	
-	$m1 = "isael@email.com";
-	$s1 = "123456";
+	$usuarios = file(dirname(dirname(__FILE__))."/database/users.txt");
 	
-	if($email == $m1 && $senha == $s1):
-		session_start();
-		$_SESSION['user'] = $email;
-		header("location: $index");
-	endif;
+	foreach ($usuarios as $cada_linha):
+		$dados = explode("#", $cada_linha);
+	
+		if($dados[1] == $email && $dados[2] == $senha):
+			session_start();
+			$_SESSION['user'] = $dados;
+			header("location: $index");
+		endif;
+	endforeach;
+	
+	header("location: $index?op=erro");
 ?>
-
