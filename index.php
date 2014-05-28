@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(!isset($_SESSION['user'])):
+	if(!isset($_SESSION["user"])):
 		require_once 'views/login.html';
 	else:
 		require_once 'controls/functions.php';
