@@ -1,10 +1,9 @@
 <?php
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
+	require_once '/var/www/agenda/controls/urls.php';
 	
-	$index = "http://localhost/agenda/";
-	
-	$usuarios = file(dirname(dirname(__FILE__))."/database/users.txt");
+	$usuarios = file($raiz."/database/users.txt");
 	
 	foreach ($usuarios as $cada_linha):
 		$dados = explode("#", $cada_linha);

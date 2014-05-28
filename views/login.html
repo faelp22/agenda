@@ -16,12 +16,12 @@
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		<link rel="stylesheet" href="views/static/css/style.css" media="all" />
+		<link rel="stylesheet" href="<?php echo $index;?>/views/static/css/style.css" media="all" />
 	</head>
 
 	<body>
 <div class="flog">
-	<form class="lform" action="http://localhost/agenda/models/login.php" method="post">
+	<form class="lform" action="<?php echo $index;?>/models/login.php" method="post">
 		<span>Área de Login</span><br /><br />
 		<label>
 			<input type="text" name="email" placeholder="Digite seu email" />
