@@ -8,14 +8,14 @@
 		
 			
 				
-			if($_GET["op"] == "logout"):
+			if(isset($_GET["op"]) && $_GET["op"] == "logout"):
 				session_destroy();
 				header("location: $index");
 				
-			elseif($_GET['op'] == "list"):
+			elseif(isset($_GET['op']) && $_GET['op'] == "list"):
 				include_once '/var/www/agenda/views/list.html';
 				
-			elseif($_GET['op'] == "cad"):
+			elseif(isset($_GET["op"]) && $_GET['op'] == "cad"):
 				include_once '/var/www/agenda/views/cad.html';
 				
 			endif;
