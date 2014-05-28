@@ -1,0 +1,16 @@
+/**
+ * 	Folha de estilo v-0.1
+ */
+
+.flog{
+	width: 250px;
+	margin:0 auto;
+	margin-top: 35px;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.lform{
+	padding: 5px;
+	margin:0 auto;
+}
