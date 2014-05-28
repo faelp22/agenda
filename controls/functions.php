@@ -6,21 +6,19 @@
 	 function conteudo(){
 		$index = "http://localhost/agenda/";
 		
-		if(isset($_SESSION['user'])):
-			if(isset($_GET['op']) == 'logout'):
+			
+				
+			if($_GET["op"] == "logout"):
 				session_destroy();
 				header("location: $index");
-			endif;
-			
-			if(isset($_GET['op']) == 'list'):
-				include_once 'views/list.html';
-			endif;
 				
-			if(isset($_GET['op']) == 'cad'):
-				include_once 'views/cad.html';
+			elseif($_GET['op'] == "list"):
+				include_once '/var/www/agenda/views/list.html';
+				
+			elseif($_GET['op'] == "cad"):
+				include_once '/var/www/agenda/views/cad.html';
 				
 			endif;
-		endif;
 		
 	 }
 ?>
