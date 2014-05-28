@@ -26,7 +26,7 @@
 			</header>
 			<nav>
 				<p>
-					Bem Vindo <a href="?op=logout">Sair</a>
+					<?php $usuario = $_SESSION['user']; echo "Bem vindo, ".$usuario[0];?> <a href="?op=logout">Sair</a>
 				</p>
 				<p>
 					<a href="http://localhost/agenda/">Home</a>

@@ -1,1 +1,19 @@
-list
+<table border="1" width="100%" align="center">
+	<tr>
+		<?php
+			foreach($titulos as $valor){
+				echo '<th>'.$valor.'</th>';
+			}
+		?>
+	</tr>
+	
+	<?php
+		foreach($dados as $cada_linha){
+			echo '<tr>';
+				foreach($cada_linha as $valor){
+					echo '<td>'.$valor.'</td>';
+				}
+			echo '</tr>';
+		}
+	?>
+</table>
