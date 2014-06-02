@@ -1,7 +1,7 @@
 <?php
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
-	require_once '/var/www/agenda/controls/urls.php';
+	require_once dirname(__DIR__).'/controls/urls.php';
 	
 	$usuarios = file($raiz."/database/users.txt");
 	

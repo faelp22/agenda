@@ -1,5 +1,5 @@
 <?php
-	require_once '/var/www/agenda/controls/urls.php';
+	require_once dirname(__DIR__).'/controls/urls.php';
 	
 	$dados = $_POST;
 		
